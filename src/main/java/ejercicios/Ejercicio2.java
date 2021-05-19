@@ -13,5 +13,7 @@ tipo de figura que sea:
  */
 
 public class Ejercicio2 {
-    
+    public static void main(String[] args) {
+        
+    }
 }
