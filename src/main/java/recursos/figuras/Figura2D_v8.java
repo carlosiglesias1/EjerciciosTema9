@@ -1,4 +1,4 @@
-package recursos;
+package recursos.figuras;
 
 public class Figura2D_v8 {
     private float ancho;
