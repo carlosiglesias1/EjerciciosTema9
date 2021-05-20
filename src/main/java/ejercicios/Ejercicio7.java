@@ -62,8 +62,12 @@ public class Ejercicio7 {
                     birthDate = checkDate(teclado.nextLine());
                     asalariadoList.add(new ConsultorExterno(id, nombre, birthDate));
                     break;
+                default:
+                    option = 'e';
+                    break;
             }
         } while (option != 'e');
+        //setting worked hours
         for (int i = 0; i < asalariadoList.size(); i++) {
             if (asalariadoList.get(i) instanceof Asalariado) {
                 Asalariado asalariado = (Asalariado) asalariadoList.get(i);
@@ -77,6 +81,7 @@ public class Ejercicio7 {
                 asalariadoList.add(i, consultorExterno);
             }
         }
+        //calculating worked hours
         for (Trabajador trabajador : asalariadoList) {
             if (trabajador instanceof Asalariado) {
                 Asalariado asalariado = (Asalariado) trabajador;
