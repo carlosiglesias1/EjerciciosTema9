@@ -24,20 +24,29 @@ import recursos.Bicicleta;
 
 public class Ejercicio12 {
     public static void main(String[] args) {
-        ArrayList <Bicicleta> bicicletas = new ArrayList<>();
+        ArrayList<Bicicleta> bicicletas = new ArrayList<>();
         Scanner teclado = new Scanner(System.in);
         for (int i = 0; i < 3; i++) {
             bicicletas.add(new Bicicleta(teclado.nextLine(), teclado.nextLine(), Float.parseFloat(teclado.nextLine())));
         }
         for (int i = 0; i < bicicletas.size(); i++) {
             for (int j = 0; j < bicicletas.size(); j++) {
-                if(bicicletas.get(i).equals(bicicletas.get(j))&&i!=j)
+                if (bicicletas.get(i).equals(bicicletas.get(j)) && i != j)
                     System.out.println("Hay bicicletas iguales");
             }
         }
-
-        for (Bicicleta bicicleta : bicicletas) {
-            System.out.println(bicicleta.toString());
+        System.out.println("Escoje una bicicleta a la que fijarle el descuento: ");
+        Bicicleta bicicleta = bicicletas.get(Integer.parseInt(teclado.nextLine()));
+        System.out.println("Introduce el descuento y los meses que va a estar activo: ");
+        float descuento = Float.parseFloat(teclado.nextLine());
+        int meses = Integer.parseInt(teclado.nextLine());
+        if (meses == 1){
+            bicicleta.fijarDescuento(descuento);
+        }else{
+            bicicleta.fijarDescuento(descuento,meses);
+        }
+        for (Bicicleta bicicleta2 : bicicletas) {
+            System.out.println(bicicleta2.toString());
         }
         teclado.close();
     }
