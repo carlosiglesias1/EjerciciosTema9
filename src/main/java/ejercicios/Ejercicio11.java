@@ -1,8 +1,8 @@
 package ejercicios;
 
+import java.util.ArrayList;
 import java.util.Scanner;
-import recursos.cuentas.CuentaPlazo;
-
+import recursos.cuentas.*;
 /**
  * 9.11. Partiendo de clases del ejercicio 8.9 (CuentaCorriente, CuentaPlazo),
  * haz un programa con un menú que permita gestionar unas cuentas bancarias que
@@ -15,7 +15,7 @@ public class Ejercicio11 {
         System.out.println("i: ingresar\nr: retirar\nv: ver saldo\ne: salir");
     }
     public static void main(String[] args) {
-        CuentaPlazo cPlazo;
+        ArrayList <CuentaCorriente> cuentaCorrientes = new ArrayList<CuentaCorriente>();
         Scanner teclado = new Scanner(System.in);
         char opcion;
         System.out.println("Crea una nueva cuenta");
