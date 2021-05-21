@@ -1,7 +1,7 @@
 package ejercicios;
 
-import recursos.Figura2D_v8;
-import recursos.Triangulo_v8;
+import recursos.figuras.Figura2D_v8;
+import recursos.figuras.Triangulo_v8;
 
 /**
  * 9.1. Realiza un programa con una variable de tipo Figura2D_v8, y sobre ella

@@ -1,4 +1,4 @@
-package recursos;
+package recursos.figuras;
 
 public class Triangulo_v8 extends Figura2D_v8 {
     private String estilo;
