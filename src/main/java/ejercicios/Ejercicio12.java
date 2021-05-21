@@ -1,5 +1,10 @@
 package ejercicios;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import recursos.Bicicleta;
+
 /**
  * 9.12. Crea una clase Bicicleta de la que deseamos mantener los siguientes
  * datos: marca, modelo, precio y descuento. Se pide crear el constructor,
@@ -18,5 +23,22 @@ package ejercicios;
  */
 
 public class Ejercicio12 {
+    public static void main(String[] args) {
+        ArrayList <Bicicleta> bicicletas = new ArrayList<>();
+        Scanner teclado = new Scanner(System.in);
+        for (int i = 0; i < 3; i++) {
+            bicicletas.add(new Bicicleta(teclado.nextLine(), teclado.nextLine(), Float.parseFloat(teclado.nextLine())));
+        }
+        for (int i = 0; i < bicicletas.size(); i++) {
+            for (int j = 0; j < bicicletas.size(); j++) {
+                if(bicicletas.get(i).equals(bicicletas.get(j))&&i!=j)
+                    System.out.println("Hay bicicletas iguales");
+            }
+        }
 
+        for (Bicicleta bicicleta : bicicletas) {
+            System.out.println(bicicleta.toString());
+        }
+        teclado.close();
+    }
 }

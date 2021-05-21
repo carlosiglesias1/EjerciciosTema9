@@ -17,6 +17,7 @@ public class Ejercicio11 {
     }
 
     public static void main(String[] args) {
+        final String PROMPTCUENTA = "Sobre qué cuenta quieres operar?";
         ArrayList<CuentaCorriente> cuentaCorrientes = new ArrayList<>();
         Scanner teclado = new Scanner(System.in);
         char opcion;
@@ -46,13 +47,13 @@ public class Ejercicio11 {
             switch (opcion) {
                 case 'i':
                     System.out.println("Ingresar dinero: ");
-                    System.out.println("Sobre qué cuenta quieres operar?");
+                    System.out.println(PROMPTCUENTA);
                     cuentaCorrientes.get(Integer.parseInt(teclado.nextLine()))
                             .ingresar(Float.parseFloat(teclado.nextLine()));
                     break;
                 case 'r':
                     System.out.println("Retirar dinero: ");
-                    System.out.println("Sobre qué cuenta quieres operar?");
+                    System.out.println(PROMPTCUENTA);
                     if (cuentaCorrientes.get(Integer.parseInt(teclado.nextLine()))
                             .retirar(Float.parseFloat(teclado.nextLine())))
                         System.out.println("Recoja su dinero");
@@ -60,7 +61,7 @@ public class Ejercicio11 {
                         System.out.println("No se ha podido realizar la operacion");
                     break;
                 case 'v':
-                    System.out.println("Sobre qué cuenta quieres operar?");
+                    System.out.println(PROMPTCUENTA);
                     System.out.println(cuentaCorrientes.get(Integer.parseInt(teclado.nextLine())).getSaldo());
                     break;
                 case 'e':
