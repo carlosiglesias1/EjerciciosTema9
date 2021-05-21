@@ -19,7 +19,7 @@ import recursos.figuras.*;
 
 public class Ejercicio2 {
     public static void main(String[] args) {
-        ArrayList<Figura2D_v8> figuraList = new ArrayList<Figura2D_v8>();
+        ArrayList<Figura2D_v8> figuraList = new ArrayList<>();
         char opcion;
         Scanner teclado = new Scanner(System.in);
         do {

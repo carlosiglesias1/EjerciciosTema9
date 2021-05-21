@@ -7,7 +7,7 @@ public class CuentaCorriente {
     private static float porcentajeComision;
     private static float minimoComision;
 
-    CuentaCorriente(String i) {
+    public CuentaCorriente(String i) {
         IBAN = i;
         saldo = 0;
         contadorIngresos = 0;

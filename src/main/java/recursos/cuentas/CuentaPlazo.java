@@ -15,15 +15,17 @@ import java.time.LocalDate;
 public final class CuentaPlazo extends CuentaCorriente {
     private LocalDate fechaCreacion;
 
-    public CuentaPlazo(String IVAN) {
-        super(IVAN);
+    public CuentaPlazo(String IBAN) {
+        super(IBAN);
         this.fechaCreacion = LocalDate.now();
+        CuentaCorriente.setComision(0f, 0f);
     }
 
     public LocalDate getFechaCreacion() {
         return fechaCreacion;
     }
-    
+
+    @Override
     public boolean retirar(float importe) {
         if (importe < this.getSaldo()) {
             this.setSaldo(this.getSaldo() - importe);
